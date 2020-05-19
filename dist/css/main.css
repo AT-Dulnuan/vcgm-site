@@ -670,7 +670,7 @@ footer .connect ul a {
   background-size: cover;
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+@media screen and (min-device-width: 320px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
   .menuNavBG {
     background-color: #2E2E2E;
   }
