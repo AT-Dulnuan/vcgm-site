@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VCGM | Sermons</title>
+
+    <!-- Styles -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <div class="main-wrapper" id="sermons">
+        <header>
+            <nav data-aos="fade" data-aos-duration="500">
+                <div class="content-wrapper">
+                    <a href="index.html" class="logo"><img src="" alt="">Logo</a>
+                    <div class="nav-links">
+                        <ul>
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="about.html">ABOUT</a></li>
+                            <li><a href="locations.html">LOCATIONS</a></li>
+                            <li><a href="sermons.html" class="is-active">SERMONS</a></li>
+                        </ul>
+                    </div>
+                    <a href="contact.php" class="btn btn-outline hover-btn" id="connect-btn">Lets
+                        Connect</a>
+                </div>
+            </nav>
+
+            <div class="header-text">
+                <h1 data-aos="fade-down" data-aos-duration="1000">Past Sermons</h1>
+            </div>
+        </header>
+
+        <section class="videos">
+            <div class="modal-video">
+                <div class="modal-content">
+                    <div class="wrapper">
+                        <iframe class="video" src="link" width="720" height="480" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <div class="close-button" onclick="closeModal()">&times;</div>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="grid">
+                    <div class="video-container"
+                        onclick="openModal(link='https://www.youtube.com/embed/M_o2z9jU_VE?autoplay=1')">
+                        <img src="assets/video-thumbnail.jpg" alt="">
+                        <div class="overlay">
+                            <i class="fab fa-youtube"></i>
+                        </div>
+                    </div>
+                    <div class="video-container"
+                        onclick="openModal(link='https://www.youtube.com/embed/EzJJo0whbJ4?autoplay=1')">
+                        <img src="assets/video-thumbnail.jpg" alt="">
+                        <div class="overlay">
+                            <i class="fab fa-youtube"></i>
+                        </div>
+                    </div>
+                    <div class="video-container"
+                        onclick="openModal(link='https://www.youtube.com/embed/M_o2z9jU_VE?autoplay=1')">
+                        <img src="assets/video-thumbnail.jpg" alt="">
+                        <div class="overlay">
+                            <i class="fab fa-youtube"></i>
+                        </div>
+                    </div>
+                    <div class="video-container"
+                        onclick="openModal(link='https://www.youtube.com/embed/EzJJo0whbJ4?autoplay=1')">
+                        <img src="assets/video-thumbnail.jpg" alt="">
+                        <div class="overlay">
+                            <i class="fab fa-youtube"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <div class="row">
+            <div class="brand">
+                <img src="" alt="">
+                <p>We are a Pentecostal movement whose heart is in building up transformed and empowered communities
+                    of faith with a desire to live out God’s Word and reflect His service and ministry so we can
+                    influence the world.</p>
+            </div>
+            <div class="links">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="locations.html">LOCATIONS</a></li>
+                    <li><a href="sermons.html" class="is-active">SERMONS</a></li>
+                </ul>
+            </div>
+            <div class="connect">
+                <p>Lets Connect!</p>
+                <ul>
+                    <a href="https://www.instagram.com/vcgmchurch/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/channel/UCdEjO9AOccUIS_IMNirLtMg/videos"><i
+                            class="fab fa-youtube"></i></a>
+                    <a href="https://soundcloud.com/vcgm-perth"><i class="fab fa-soundcloud"></i></a>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://kit.fontawesome.com/3ce9093fd0.js" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

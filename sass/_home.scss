@@ -1,0 +1,94 @@
+#home {
+    header {
+        background: linear-gradient(to bottom right, rgba(46,46,46,0.4), rgba(46,46,46,1)), url("../assets/home-header.jpg") no-repeat right    ;
+        background-size: cover;
+    }
+
+    section.livestream {
+        padding: 3rem 0;
+        background-color: $highlight;
+        color: $white;
+        width: 100%;
+
+        h2 {
+            text-align: left;
+        }
+
+        .row {
+            align-items: center;
+        }
+
+        .img-container {
+            flex-basis: auto;
+            width: 40%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        ul {
+            padding-bottom: 2.5rem;
+            padding-top: 0.7rem;
+            font-size: 20px;
+        }
+    }
+
+    section.banner {
+        h2 {
+            padding: 15rem 0;
+            font-size: 36px;
+        }
+    }
+
+    section.locations {
+        width: 100%;
+
+        .img-slider {
+            div {
+                position: relative;
+                img {
+                    height: 600px;
+                    width: 100%;
+                    object-fit: cover;
+                }
+
+                .overlay {
+                    background-color: $text;
+                    opacity: 0.6;
+                    transition: 0.5s ease-in-out;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .text {
+                    text-align: center;
+                    color: $white;
+                    position: absolute;
+                    top: 45%;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    
+                    h2 {
+                        padding-bottom: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+
+    section.home {
+        padding: 8rem 0;
+
+        p {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,109 @@
+.stop-scroll {
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+#sermons {
+    header {
+        background: linear-gradient(to bottom right, rgba(46,46,46,0.4), rgba(46,46,46,1)), url("../assets/sermons-header.jpg") no-repeat center;
+        background-size: cover;
+    }
+  
+    section.videos {
+        margin: 4rem 0;
+        position: relative;
+        
+        .wrapper {
+            width: 80%;
+            margin: auto;
+            padding: 2rem 0;
+  
+            .grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto;
+                gap: 6rem;
+                justify-items: stretch;
+                align-items: center;
+            }
+
+            .video-container {
+                cursor: pointer;
+                position: relative;
+      
+                img {
+                    display: block;
+                    width: 100%;
+                }
+      
+                .overlay {
+                    opacity: 0;
+                    background-color: rgba($color: #000000, $alpha: 0.2);
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition: 0.3s ease-in-out;
+      
+                    i {
+                        font-size: 4rem;
+                        color: #f11f1f;
+                    }
+                }
+            }
+      
+            .video-container:hover .overlay {
+                opacity: 1;
+            }
+        }
+  
+        .modal-video {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 5;
+            opacity: 0;
+            overflow: hidden;
+            visibility: hidden;
+            transform: scale(1.1);
+            transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  
+            .close-button {
+                cursor: pointer;
+                color: $white;
+                font-size: 3rem;
+                position: absolute;
+                top: 0;
+                right: 20px;
+            }
+  
+            .modal-content {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                overflow: hidden;
+                
+                .wrapper {
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                }
+            }
+        }
+  
+        .show-modal {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1.0);
+            transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+        }
+    }
+  }

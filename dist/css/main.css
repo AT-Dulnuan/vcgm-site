@@ -1,0 +1,894 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
+}
+
+body h1 {
+  font-size: 50px;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+body h2 {
+  font-size: 46px;
+  font-weight: bold;
+  padding-bottom: 1rem;
+}
+
+body h4 {
+  font-size: 26px;
+  font-weight: bold;
+  padding-bottom: 1rem;
+  padding-bottom: 0.4rem;
+}
+
+body .right-align {
+  text-align: right;
+}
+
+body .left-align {
+  text-align: left;
+}
+
+body .center-align {
+  text-align: center;
+}
+
+body .content-wrapper {
+  width: 95%;
+  margin: auto;
+}
+
+body .btn {
+  border-radius: 5px;
+}
+
+body .btn-outline {
+  padding: 0.5rem 2rem;
+  border: 2px solid #FFFFFF;
+}
+
+body .btn-outline:hover, body .btn-outline:focus, body .btn-outline:active {
+  color: #0075A2;
+}
+
+body .btn-outline:before {
+  background: #FFFFFF;
+  border-radius: 0.3rem;
+}
+
+body .btn-cta {
+  background: #0075A2;
+  padding: 0.6rem 2rem;
+  font-size: 18px;
+  border: transparent;
+}
+
+body .btn-cta:hover, body .btn-cta:focus, body .btn-cta:active {
+  color: #FFFFFF;
+}
+
+body .btn-cta:before {
+  background: #0685B6;
+  border-radius: 0.5rem;
+}
+
+body .hover-btn {
+  border-radius: 0.5rem;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+body .hover-btn:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 0;
+  left: 50%;
+  top: 0;
+  opacity: 0;
+  -webkit-transition: width 0.5s ease 0s, left 0.5s ease 0s, opacity 0.5s ease 0s;
+  transition: width 0.5s ease 0s, left 0.5s ease 0s, opacity 0.5s ease 0s;
+}
+
+body .hover-btn:hover:before, body .hover-btn:focus:before, body .hover-btn:active:before {
+  left: 0;
+  width: 100%;
+  opacity: 1;
+}
+
+body .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+header {
+  height: 100vh;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+header .open-menu-btn, header .mobile-menu {
+  visibility: hidden;
+  display: none;
+}
+
+header nav .content-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 0;
+}
+
+header nav .content-wrapper a.logo {
+  width: 10%;
+}
+
+header nav .content-wrapper .nav-links {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+header nav .content-wrapper ul {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+header nav .content-wrapper ul li a {
+  padding: 1rem;
+  position: relative;
+}
+
+header nav .content-wrapper ul li a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 5px;
+  left: 50%;
+  position: absolute;
+  background: #0075A2;
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+header nav .content-wrapper ul li a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+header nav .content-wrapper ul li a.is-active:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 5px;
+  left: 0;
+  position: absolute;
+  background: #0075A2;
+  width: 100%;
+}
+
+header nav .content-wrapper ul li a.is-active {
+  cursor: default;
+}
+
+header .header-text {
+  height: 100%;
+  text-align: center;
+  margin-top: 15%;
+}
+
+header .header-text h1, header .header-text a {
+  z-index: 0;
+}
+
+footer {
+  background-color: #0075A2;
+  color: #FFFFFF;
+}
+
+footer .row {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 5rem 0;
+}
+
+footer a:hover {
+  color: #2E2E2E;
+}
+
+footer .brand {
+  width: 25%;
+}
+
+footer .links a {
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+footer .links a.is-active {
+  font-weight: bold;
+}
+
+footer .links a.is-active:hover {
+  color: unset;
+}
+
+footer .links li {
+  line-height: 3rem;
+}
+
+footer .connect p {
+  font-weight: bold;
+}
+
+footer .connect ul {
+  font-size: 1.7rem;
+  padding-top: 0.5rem;
+}
+
+footer .connect ul a {
+  margin: 0 2px;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+#home header {
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(46, 46, 46, 0.4)), to(#2e2e2e)), url("../assets/home-header.jpg") no-repeat right;
+  background: linear-gradient(to bottom right, rgba(46, 46, 46, 0.4), #2e2e2e), url("../assets/home-header.jpg") no-repeat right;
+  background-size: cover;
+}
+
+#home section.livestream {
+  padding: 3rem 0;
+  background-color: #0075A2;
+  color: #FFFFFF;
+  width: 100%;
+}
+
+#home section.livestream h2 {
+  text-align: left;
+}
+
+#home section.livestream .row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#home section.livestream .img-container {
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  width: 40%;
+}
+
+#home section.livestream .img-container img {
+  width: 100%;
+}
+
+#home section.livestream ul {
+  padding-bottom: 2.5rem;
+  padding-top: 0.7rem;
+  font-size: 20px;
+}
+
+#home section.banner h2 {
+  padding: 15rem 0;
+  font-size: 36px;
+}
+
+#home section.locations {
+  width: 100%;
+}
+
+#home section.locations .img-slider div {
+  position: relative;
+}
+
+#home section.locations .img-slider div img {
+  height: 600px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#home section.locations .img-slider div .overlay {
+  background-color: #2E2E2E;
+  opacity: 0.6;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#home section.locations .img-slider div .text {
+  text-align: center;
+  color: #FFFFFF;
+  position: absolute;
+  top: 45%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#home section.locations .img-slider div .text h2 {
+  padding-bottom: 0.5rem;
+}
+
+#home section.home {
+  padding: 8rem 0;
+}
+
+#home section.home p {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+#about header {
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(46, 46, 46, 0.6)), to(#2e2e2e)), url("../assets/about-header.jpg") no-repeat center;
+  background: linear-gradient(to bottom right, rgba(46, 46, 46, 0.6), #2e2e2e), url("../assets/about-header.jpg") no-repeat center;
+  background-size: cover;
+}
+
+#about section {
+  padding: 8rem 0;
+}
+
+#about section .row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#about section p {
+  width: 60%;
+  margin: auto;
+}
+
+#about section.vision {
+  background-color: #0075A2;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+#about section.mission ul {
+  width: 40%;
+  margin: auto;
+}
+
+#about section.mission li {
+  margin: 1.3rem 0;
+}
+
+#about section.mission span {
+  font-weight: bold;
+}
+
+#about section.mission .img-container img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 500px;
+  width: auto;
+}
+
+#locations header {
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(46, 46, 46, 0.4)), to(#2e2e2e)), url("../assets/locations-header.jpg") no-repeat center;
+  background: linear-gradient(to bottom right, rgba(46, 46, 46, 0.4), #2e2e2e), url("../assets/locations-header.jpg") no-repeat center;
+  background-size: cover;
+}
+
+#locations section.main {
+  padding: 4rem 0;
+}
+
+#locations section.main .row {
+  margin: 1rem 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#locations section.main h2 {
+  color: #0075A2;
+}
+
+#locations section.main .img-container {
+  width: 30%;
+}
+
+#locations section.main .img-container img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#locations section.main p.address {
+  font-style: italic;
+}
+
+#locations section.main ul.timings {
+  margin-top: 1rem;
+}
+
+#locations section.main ul.timings .title {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+#locations section.main ul.socials {
+  margin: 1.3rem 0;
+}
+
+#locations section.main ul.socials li {
+  line-height: 2.3rem;
+  color: #0075A2;
+}
+
+#locations section.main ul.socials li i {
+  font-size: 1.5rem;
+}
+
+#locations section.main ul.socials li a {
+  font-weight: bold;
+}
+
+#locations section.main ul.socials li a span.unhovered {
+  display: inline-block;
+}
+
+#locations section.main ul.socials li a span.hovered {
+  display: none;
+}
+
+#locations section.main ul.socials li a:hover span.unhovered {
+  display: none;
+}
+
+#locations section.main ul.socials li a:hover span.hovered {
+  display: inline-block;
+}
+
+.stop-scroll {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+#sermons header {
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(46, 46, 46, 0.4)), to(#2e2e2e)), url("../assets/sermons-header.jpg") no-repeat center;
+  background: linear-gradient(to bottom right, rgba(46, 46, 46, 0.4), #2e2e2e), url("../assets/sermons-header.jpg") no-repeat center;
+  background-size: cover;
+}
+
+#sermons section.videos {
+  margin: 4rem 0;
+  position: relative;
+}
+
+#sermons section.videos .wrapper {
+  width: 80%;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+#sermons section.videos .wrapper .grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  gap: 6rem;
+  justify-items: stretch;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#sermons section.videos .wrapper .video-container {
+  cursor: pointer;
+  position: relative;
+}
+
+#sermons section.videos .wrapper .video-container img {
+  display: block;
+  width: 100%;
+}
+
+#sermons section.videos .wrapper .video-container .overlay {
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+#sermons section.videos .wrapper .video-container .overlay i {
+  font-size: 4rem;
+  color: #f11f1f;
+}
+
+#sermons section.videos .wrapper .video-container:hover .overlay {
+  opacity: 1;
+}
+
+#sermons section.videos .modal-video {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 5;
+  opacity: 0;
+  overflow: hidden;
+  visibility: hidden;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: visibility 0s linear 0.25s, opacity 0.25s 0s, -webkit-transform 0.25s;
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, -webkit-transform 0.25s;
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s, -webkit-transform 0.25s;
+}
+
+#sermons section.videos .modal-video .close-button {
+  cursor: pointer;
+  color: #FFFFFF;
+  font-size: 3rem;
+  position: absolute;
+  top: 0;
+  right: 20px;
+}
+
+#sermons section.videos .modal-video .modal-content {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+#sermons section.videos .modal-video .modal-content .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#sermons section.videos .show-modal {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: visibility 0s linear 0s, opacity 0.25s 0s, -webkit-transform 0.25s;
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, -webkit-transform 0.25s;
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s, -webkit-transform 0.25s;
+}
+
+#contact header {
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(46, 46, 46, 0.4)), to(#2e2e2e)), url("../assets/sermons-header.jpg") no-repeat center;
+  background: linear-gradient(to bottom right, rgba(46, 46, 46, 0.4), #2e2e2e), url("../assets/sermons-header.jpg") no-repeat center;
+  background-size: cover;
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+  .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+  .content-wrapper {
+    width: 95%;
+  }
+  .btn {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+  header .content-wrapper {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header .header-text {
+    margin-top: 50%;
+  }
+  footer {
+    text-align: center;
+    font-size: 20px;
+  }
+  footer .row {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .row .brand {
+    width: 90%;
+    margin: auto;
+  }
+  footer .row div {
+    margin: 2rem 0;
+  }
+  footer .row .connect i {
+    font-size: 2.3rem;
+    margin: 0.2rem 0.4rem;
+  }
+  #open-menu {
+    width: 35px;
+    height: 20px;
+    position: relative;
+    margin: 10px auto;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    z-index: 99;
+  }
+  #open-menu span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+    z-index: 99;
+  }
+  #open-menu span:nth-child(1) {
+    top: 0px;
+  }
+  #open-menu span:nth-child(2), #open-menu span:nth-child(3) {
+    top: 12px;
+  }
+  #open-menu span:nth-child(4) {
+    top: 24px;
+  }
+  #open-menu.open span:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+  }
+  #open-menu.open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  #open-menu.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  #open-menu.open span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+  }
+  nav .nav-links ul li, nav #connect-btn {
+    visibility: hidden;
+    display: none;
+    width: 0;
+  }
+  nav .open-menu-btn {
+    visibility: visible;
+  }
+  nav .open-menu-btn i {
+    color: #FFFFFF;
+    font-size: 2rem;
+  }
+  .mobile-menu {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    background-color: #2E2E2E;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .mobile-menu a {
+    color: #0075A2;
+    padding: 4rem 0;
+    display: block;
+    font-size: 1.3rem;
+  }
+  .mobile-menu a.is-active > span {
+    border-bottom: 3px solid #0075A2;
+  }
+  .mobile-menu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .mobile-menu li {
+    display: block;
+  }
+  .mobile-menu.open {
+    visibility: visible;
+    background-color: #2E2E2E;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  #home section.livestream .img-container {
+    width: 100%;
+  }
+  #home section.livestream h2, #home section.livestream li {
+    text-align: center;
+  }
+  #home section.home p {
+    width: 90%;
+    margin: auto;
+  }
+  #home section.banner {
+    margin: 0 1rem;
+  }
+  #about section.vision p {
+    width: 95%;
+  }
+  #about section.mission ul {
+    width: 90%;
+  }
+  #locations section.main .right-align, #locations section.main .left-align {
+    text-align: center;
+  }
+  #locations section.main .row {
+    padding: 2rem 0;
+  }
+  #locations section.main .img-container {
+    width: 90%;
+  }
+  #locations section.main ul.socials {
+    text-align: left;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+  }
+  #locations section.main ul.timings {
+    margin: 2rem 0;
+  }
+  #locations section.main section.me .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  #sermons section.videos .wrapper {
+    width: 90%;
+    margin: auto;
+  }
+  #sermons section.videos .wrapper .row {
+    margin: 0;
+  }
+  #sermons section.videos .wrapper .grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    row-gap: 4rem;
+  }
+  #sermons section.videos .wrapper .grid .video-container .overlay {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=main.css.map */

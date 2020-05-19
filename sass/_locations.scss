@@ -1,0 +1,74 @@
+#locations {
+    header {
+        background: linear-gradient(to bottom right, rgba(46,46,46,0.4), rgba(46,46,46,1)), url("../assets/locations-header.jpg") no-repeat center;
+        background-size: cover;
+    }
+
+    section.main {
+        padding: 4rem 0;
+        .row {
+            margin: 1rem 0;
+            align-items: center;
+        }
+
+        h2 {
+            color: $highlight;
+        }
+
+        .img-container {
+            width: 30%;
+    
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        p.address {
+            font-style: italic;
+        }
+
+        ul.timings {
+            margin-top: 1rem;
+            .title {
+                font-weight: bold;
+                font-size: 1.2rem;
+            }
+        }
+
+        ul.socials {
+            margin: 1.3rem 0;
+
+            li {
+                line-height: 2.3rem;
+                color: $highlight;
+
+                i {
+                    font-size: 1.5rem;
+                }
+
+                a {
+                    
+                    font-weight: bold;
+                    span.unhovered {
+                        display: inline-block;
+                    }
+
+                    span.hovered {
+                        display: none;
+                    }
+
+                    &:hover {
+                        span.unhovered {
+                            display: none;
+                        }
+
+                        span.hovered {
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
