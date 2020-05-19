@@ -55,6 +55,8 @@ body {
         font-size: $h1;
         text-align: center;
         padding-bottom: 2rem;
+        position: relative;
+        z-index: 1;
     }
 
     h2 {
@@ -160,30 +162,36 @@ body {
     }
 }
 
+.stop-scroll {
+    height: 100vh;
+    overflow: hidden;
+}
+
 header {
     height: 100vh;
     color: $white;
     font-weight: bold;
 
-    .open-menu-btn, .mobile-menu {
+    #open-menu {
         visibility: hidden;
-        display: none;
     }
 
     nav .content-wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1rem 0;
+        // padding: 1rem 0;
+        height: 10vh;
 
         a.logo {
-            width: 10%;
+            width: 40%;
         }
 
         .nav-links {
             flex-grow: 1;
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
+            align-items: center;
         }
 
         ul {
@@ -235,10 +243,6 @@ header {
         height: 100%;
         text-align: center;
         margin-top: 15%;
-
-        h1, a {
-            z-index: 0;
-        }
     }
 }
 
@@ -305,10 +309,137 @@ footer {
     }
 }
 
+
+
+
+
 @media only screen 
   and (min-device-width: 375px) 
   and (max-device-width: 812px) 
   and (-webkit-min-device-pixel-ratio: 3) { 
+
+    .menuNavBG {
+        background-color: $text;
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0;
+        top: 10vh;
+        flex-direction: column;
+        height: 90vh;
+        width: 100%;
+        background-color: $text;
+        z-index: 9;
+        transform: translateY(-120%);
+        opacity: 0;
+        transition: ease-in-out 0.6s;
+        
+
+        ul {
+            flex-direction: column;
+            align-items: center;
+            height: 80%;
+            width: 100%;
+        }
+
+        .btn-container {
+            width: 90%;
+            margin: auto;
+
+            a#connect-btn {
+                width: 100%;
+            }
+        }
+    }
+
+    .nav-active {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .hide-header {
+        position: relative;
+        z-index: -1;
+    }
+
+    // ------------------------------------------- Burger -------------------------------------------
+
+    #menuBurger {
+        display: block;
+        width: 40px;
+        // height: 2px;
+        position: relative;
+        // margin: 50px auto;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .5s ease-in-out;
+        -moz-transition: .5s ease-in-out;
+        -o-transition: .5s ease-in-out;
+        transition: .5s ease-in-out;
+        cursor: pointer;
+
+        span {
+            display: block;
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            background: $white;
+            border-radius: 9px;
+            opacity: 1;
+            left: 0;
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+            -webkit-transition: .25s ease-in-out;
+            -moz-transition: .25s ease-in-out;
+            -o-transition: .25s ease-in-out;
+            transition: .25s ease-in-out;
+        }
+    }
+    
+    #menuBurger span:nth-child(1) {
+        top: 0px;
+      }
+      
+      #menuBurger span:nth-child(2),#menuBurger span:nth-child(3) {
+        top: 10px;
+      }
+      
+      #menuBurger span:nth-child(4) {
+        top: 20px;
+      }
+      
+      #menuBurger.open span:nth-child(1) {
+        top: 18px;
+        width: 0%;
+        left: 50%;
+      }
+      
+      #menuBurger.open span:nth-child(2) {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      
+      #menuBurger.open span:nth-child(3) {
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+      }
+      
+      #menuBurger.open span:nth-child(4) {
+        top: 18px;
+        width: 0%;
+        left: 50%;
+      }
+
+    // ------------------------------------------------------------------------------------------------
 
     .row {
         flex-flow: column;
@@ -355,145 +486,6 @@ footer {
                 font-size: 2.3rem;
                 margin: 0.2rem 0.4rem;
             }
-        }
-    }
-
-    // --------------------------------------------------- Mobile Nav --------------------------------------------------------------
-
-    #open-menu {
-        width: 35px;
-        height: 20px;
-        position: relative;
-        margin: 10px auto;
-        -webkit-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
-        transform: rotate(0deg);
-        -webkit-transition: .5s ease-in-out;
-        -moz-transition: .5s ease-in-out;
-        -o-transition: .5s ease-in-out;
-        transition: .5s ease-in-out;
-        cursor: pointer;
-        z-index: 99;
-
-        span {
-            display: block;
-            position: absolute;
-            height: 3px;
-            width: 100%;
-            background: $white;
-            border-radius: 9px;
-            opacity: 1;
-            left: 0;
-            -webkit-transform: rotate(0deg);
-            -moz-transform: rotate(0deg);
-            -o-transform: rotate(0deg);
-            transform: rotate(0deg);
-            -webkit-transition: .25s ease-in-out;
-            -moz-transition: .25s ease-in-out;
-            -o-transition: .25s ease-in-out;
-            transition: .25s ease-in-out;
-            z-index: 99;
-        }
-    }
-
-    #open-menu span:nth-child(1) {
-        top: 0px;
-        }
-        
-        #open-menu span:nth-child(2), #open-menu span:nth-child(3) {
-        top: 12px;
-        }
-        
-        #open-menu span:nth-child(4) {
-        top: 24px;
-        }
-        
-        #open-menu.open span:nth-child(1) {
-        top: 18px;
-        width: 0%;
-        left: 50%;
-        }
-        
-        #open-menu.open span:nth-child(2) {
-        -webkit-transform: rotate(45deg);
-        -moz-transform: rotate(45deg);
-        -o-transform: rotate(45deg);
-        transform: rotate(45deg);
-        }
-        
-        #open-menu.open span:nth-child(3) {
-        -webkit-transform: rotate(-45deg);
-        -moz-transform: rotate(-45deg);
-        -o-transform: rotate(-45deg);
-        transform: rotate(-45deg);
-        }
-        
-        #open-menu.open span:nth-child(4) {
-        top: 18px;
-        width: 0%;
-        left: 50%;
-        }
-
-    nav {
-        .nav-links ul li, #connect-btn {
-            visibility: hidden;
-            display: none;
-            width: 0;
-        }
-
-        .open-menu-btn {
-            visibility: visible;
-
-            i {
-                color: $white;
-                font-size: 2rem;
-            }
-        }
-    }
-
-    .mobile-menu {
-        visibility: hidden;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        z-index: 9;
-        transform: translateX(100%);
-        transition: 0.5s ease-in-out;
-        background-color: $text;
-        display: flex;
-        flex-flow: column;
-        justify-content: space-between;
-
-        a {
-            color: $highlight;
-            padding: 4rem 0;
-            display: block;
-            font-size: 1.3rem;
-        }
-
-        a.is-active > span {
-            border-bottom: 3px solid $highlight;
-        }
-        
-        ul {
-            display: flex;
-            flex-flow: column wrap;
-            text-align: center;
-            margin-top: 2rem;
-            // justify-content: space-around;
-        }
-    
-        li {
-            display: block;
-        }
-
-        &.open {
-            visibility: visible;
-            background-color: $text;
-            transform: translateX(0);
         }
     }
 
