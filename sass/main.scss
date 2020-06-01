@@ -184,7 +184,12 @@ header {
         height: 10vh;
 
         a.logo {
-            width: 40%;
+            width: 30%;
+
+            img {
+                height: 50px;
+                width: auto;
+            }
         }
 
         .nav-links {
@@ -192,6 +197,7 @@ header {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            // width: 90%;
         }
 
         ul {
@@ -304,8 +310,26 @@ footer {
 
 #contact {
     header {
-        background: linear-gradient(to bottom right, rgba(46,46,46,0.4), rgba(46,46,46,1)), url("../assets/sermons-header.jpg") no-repeat center;
+        background: linear-gradient(to bottom right, rgba(46,46,46,0.4), rgba(46,46,46,1)), url("../assets/contact-header.jpg") no-repeat center;
         background-size: cover;
+        height: 60vh;
+
+        .header-text {
+            margin-top: 8%;
+        }
+    }
+
+    section.contact-form {
+        padding: 4rem 0;
+
+        form {
+            width: 80%;
+            margin: auto;
+        }
+
+        .modal-content {
+            width: 80%;
+        }
     }
 }
 
@@ -367,8 +391,8 @@ and (min-device-width: 320px)
 
     #menuBurger {
         display: block;
-        width: 40px;
-        // height: 2px;
+        width: 35px;
+        height: 23px;
         position: relative;
         // margin: 50px auto;
         -webkit-transform: rotate(0deg);
@@ -527,6 +551,12 @@ and (min-device-width: 320px)
                 width: 90%;
             }
         }
+
+        section.community {
+            video {
+                height: 500px;
+            }
+        }
     }
 
     // --------------------------------------------------- Locations --------------------------------------------------------------
@@ -590,6 +620,12 @@ and (min-device-width: 320px)
 
         }
     }
+
+    // --------------------------------------------------- Contact --------------------------------------------------------------
+    #contact {
+        .button {
+            width: 100%;
+        }
+    }
+
 }
-
-

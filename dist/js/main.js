@@ -33,7 +33,6 @@ $(document).ready(function () {
     });
 });
 
-
 function openMenu() {
     const headerText = document.querySelector(".header-text");
     const navLinks = document.querySelector(".nav-links");

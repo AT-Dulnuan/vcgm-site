@@ -182,7 +182,12 @@ header nav .content-wrapper {
 }
 
 header nav .content-wrapper a.logo {
-  width: 40%;
+  width: 30%;
+}
+
+header nav .content-wrapper a.logo img {
+  height: 50px;
+  width: auto;
 }
 
 header nav .content-wrapper .nav-links {
@@ -453,6 +458,13 @@ footer .connect ul a {
   width: auto;
 }
 
+#about section.community video {
+  height: 700px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 #locations header {
   background: -webkit-gradient(linear, left top, right bottom, from(rgba(46, 46, 46, 0.4)), to(#2e2e2e)), url("../assets/locations-header.jpg") no-repeat center;
   background: linear-gradient(to bottom right, rgba(46, 46, 46, 0.4), #2e2e2e), url("../assets/locations-header.jpg") no-repeat center;
@@ -665,9 +677,27 @@ footer .connect ul a {
 }
 
 #contact header {
-  background: -webkit-gradient(linear, left top, right bottom, from(rgba(46, 46, 46, 0.4)), to(#2e2e2e)), url("../assets/sermons-header.jpg") no-repeat center;
-  background: linear-gradient(to bottom right, rgba(46, 46, 46, 0.4), #2e2e2e), url("../assets/sermons-header.jpg") no-repeat center;
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(46, 46, 46, 0.4)), to(#2e2e2e)), url("../assets/contact-header.jpg") no-repeat center;
+  background: linear-gradient(to bottom right, rgba(46, 46, 46, 0.4), #2e2e2e), url("../assets/contact-header.jpg") no-repeat center;
   background-size: cover;
+  height: 60vh;
+}
+
+#contact header .header-text {
+  margin-top: 8%;
+}
+
+#contact section.contact-form {
+  padding: 4rem 0;
+}
+
+#contact section.contact-form form {
+  width: 80%;
+  margin: auto;
+}
+
+#contact section.contact-form .modal-content {
+  width: 80%;
 }
 
 @media screen and (min-device-width: 320px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
@@ -721,7 +751,8 @@ footer .connect ul a {
   }
   #menuBurger {
     display: block;
-    width: 40px;
+    width: 35px;
+    height: 23px;
     position: relative;
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
@@ -831,6 +862,9 @@ footer .connect ul a {
   #about section.mission ul {
     width: 90%;
   }
+  #about section.community video {
+    height: 500px;
+  }
   #locations section.main .right-align, #locations section.main .left-align {
     text-align: center;
   }
@@ -870,6 +904,9 @@ footer .connect ul a {
   }
   #sermons section.videos .wrapper .grid .video-container .overlay {
     opacity: 1;
+  }
+  #contact .button {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=main.css.map */
