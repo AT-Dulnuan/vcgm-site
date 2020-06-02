@@ -312,6 +312,69 @@ footer .connect ul a {
   transition: 0.5s ease-in-out;
 }
 
+.modal-video {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 5;
+  opacity: 0;
+  overflow: hidden;
+  visibility: hidden;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: visibility 0s linear 0.25s, opacity 0.25s 0s, -webkit-transform 0.25s;
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, -webkit-transform 0.25s;
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s, -webkit-transform 0.25s;
+}
+
+.modal-video .close-button {
+  cursor: pointer;
+  color: #FFFFFF;
+  font-size: 3rem;
+  position: absolute;
+  top: 0;
+  right: 20px;
+}
+
+.modal-video .modal-content {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.modal-video .modal-content .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: visibility 0s linear 0s, opacity 0.25s 0s, -webkit-transform 0.25s;
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, -webkit-transform 0.25s;
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s, -webkit-transform 0.25s;
+}
+
 #home header {
   background: -webkit-gradient(linear, left top, right bottom, from(rgba(46, 46, 46, 0.4)), to(#2e2e2e)), url("../assets/home-header.jpg") no-repeat right;
   background: linear-gradient(to bottom right, rgba(46, 46, 46, 0.4), #2e2e2e), url("../assets/home-header.jpg") no-repeat right;
@@ -323,29 +386,52 @@ footer .connect ul a {
   background-color: #0075A2;
   color: #FFFFFF;
   width: 100%;
+  position: relative;
 }
 
-#home section.livestream h2 {
+#home section.livestream a {
+  cursor: pointer;
+}
+
+#home section.livestream .live {
+  padding-bottom: 3rem;
+}
+
+#home section.livestream .live h2 {
+  text-align: center;
+}
+
+#home section.livestream .live .live-vid {
+  width: 75%;
+  height: 70vh;
+}
+
+#home section.livestream .live .live-chat {
+  height: 70vh;
+  width: 20%;
+}
+
+#home section.livestream .join h2 {
   text-align: left;
 }
 
-#home section.livestream .row {
+#home section.livestream .join .row {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-#home section.livestream .img-container {
+#home section.livestream .join .img-container {
   -ms-flex-preferred-size: auto;
       flex-basis: auto;
   width: 40%;
 }
 
-#home section.livestream .img-container img {
+#home section.livestream .join .img-container img {
   width: 100%;
 }
 
-#home section.livestream ul {
+#home section.livestream .join ul {
   padding-bottom: 2.5rem;
   padding-top: 0.7rem;
   font-size: 20px;
@@ -408,9 +494,29 @@ footer .connect ul a {
 }
 
 #about header {
-  background: -webkit-gradient(linear, left top, right bottom, from(rgba(46, 46, 46, 0.6)), to(#2e2e2e)), url("../assets/about-header.jpg") no-repeat center;
-  background: linear-gradient(to bottom right, rgba(46, 46, 46, 0.6), #2e2e2e), url("../assets/about-header.jpg") no-repeat center;
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(46, 46, 46, 0.6)), to(#2e2e2e)), url("../assets/about-header.mp4") no-repeat center;
+  background: linear-gradient(to bottom right, rgba(46, 46, 46, 0.6), #2e2e2e), url("../assets/about-header.mp4") no-repeat center;
   background-size: cover;
+  position: relative;
+}
+
+#about header video.about-header-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#about header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(46, 46, 46, 0.6)), to(#2e2e2e));
+  background: linear-gradient(to bottom right, rgba(46, 46, 46, 0.6), #2e2e2e);
 }
 
 #about section {
@@ -611,69 +717,6 @@ footer .connect ul a {
 
 #sermons section.videos .wrapper .video-container:hover .overlay {
   opacity: 1;
-}
-
-#sermons section.videos .modal-video {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  z-index: 5;
-  opacity: 0;
-  overflow: hidden;
-  visibility: hidden;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-transition: visibility 0s linear 0.25s, opacity 0.25s 0s, -webkit-transform 0.25s;
-  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, -webkit-transform 0.25s;
-  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
-  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s, -webkit-transform 0.25s;
-}
-
-#sermons section.videos .modal-video .close-button {
-  cursor: pointer;
-  color: #FFFFFF;
-  font-size: 3rem;
-  position: absolute;
-  top: 0;
-  right: 20px;
-}
-
-#sermons section.videos .modal-video .modal-content {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  overflow: hidden;
-}
-
-#sermons section.videos .modal-video .modal-content .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-#sermons section.videos .show-modal {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: visibility 0s linear 0s, opacity 0.25s 0s, -webkit-transform 0.25s;
-  transition: visibility 0s linear 0s, opacity 0.25s 0s, -webkit-transform 0.25s;
-  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
-  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s, -webkit-transform 0.25s;
 }
 
 #contact header {

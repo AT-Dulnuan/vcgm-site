@@ -1,7 +1,25 @@
 #about {
     header {
-        background: linear-gradient(to bottom right, rgba(46,46,46,0.6), rgba(46,46,46,1)), url("../assets/about-header.jpg") no-repeat center;
+        background: linear-gradient(to bottom right, rgba(46,46,46,0.6), rgba(46,46,46,1)), url("../assets/about-header.mp4") no-repeat center;
         background-size: cover;
+
+        position: relative;
+        video.about-header-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .overlay {
+            position: absolute;
+            top:0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(to bottom right, rgba(46,46,46,0.6), rgba(46,46,46,1));
+        }
     }
 
     section {

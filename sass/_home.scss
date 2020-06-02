@@ -9,28 +9,52 @@
         background-color: $highlight;
         color: $white;
         width: 100%;
+        position: relative;
 
-        h2 {
-            text-align: left;
+        a {
+            cursor: pointer;
         }
 
-        .row {
-            align-items: center;
-        }
+        .live {
+            padding-bottom: 3rem;
+            h2 {
+                text-align: center;
+            }
 
-        .img-container {
-            flex-basis: auto;
-            width: 40%;
+            .live-vid {
+                width: 75%;
+                height: 70vh;
+            }
 
-            img {
-                width: 100%;
+            .live-chat {
+                height: 70vh;
+                width: 20%;
             }
         }
 
-        ul {
-            padding-bottom: 2.5rem;
-            padding-top: 0.7rem;
-            font-size: 20px;
+        .join {
+            h2 {
+                text-align: left;
+            }
+    
+            .row {
+                align-items: center;
+            }
+    
+            .img-container {
+                flex-basis: auto;
+                width: 40%;
+    
+                img {
+                    width: 100%;
+                }
+            }
+    
+            ul {
+                padding-bottom: 2.5rem;
+                padding-top: 0.7rem;
+                font-size: 20px;
+            }
         }
     }
 
