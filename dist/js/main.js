@@ -6,9 +6,11 @@ const modal = document.querySelector(".modal-video");
 const modalContent = document.querySelector(".modal-content");
 const video = document.querySelector(".video");
 const body = document.getElementsByTagName("body")[0];
+var videoSrc = "";
 
 function openModal(link) {
-    video.setAttribute("src", link);
+    videoSrc = link;
+    video.setAttribute("src", videoSrc);
     modal.classList.add("show-modal");
     body.classList.add("stop-scroll");
 }
@@ -16,6 +18,13 @@ function openModal(link) {
 function closeModal() {
     modal.classList.remove("show-modal");
     body.classList.remove("stop-scroll");
+    video.setAttribute("src", "");
+}
+
+function videoOpen(link) {
+    body.classList.add("is-clipped");
+    document.getElementById("videoModal").classList.add("is-active");
+    video.setAttribute("src", link);
 }
 
 window.onclick = function (event) {
@@ -44,4 +53,8 @@ function openMenu() {
     navLinks.classList.toggle('nav-active');
     menuBurger.classList.toggle('open');
     nav.classList.toggle('menuNavBG');
+}
+
+function openChat() {
+    const chat = document.querySelector(".live-chat").classList.toggle("open");
 }

@@ -15,20 +15,30 @@
             cursor: pointer;
         }
 
+        
         .live {
             padding-bottom: 3rem;
+
+            a.chat-btn {
+                display: none;
+            }
+
+            .row {
+                justify-content: center;
+            }
+            
             h2 {
                 text-align: center;
             }
 
             .live-vid {
-                width: 75%;
-                height: 70vh;
+                height: 80vh;
+                width: 100%;
             }
 
             .live-chat {
-                height: 70vh;
-                width: 20%;
+                height: 80vh;
+                width: 30%;
             }
         }
 
