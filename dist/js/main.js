@@ -40,12 +40,6 @@ $(document).ready(function () {
         dots: true,
         pauseOnHover: false
     });
-
-    const curDate = new Date();
-    console.log(curDate);
-    // if (curDate.getDay() === 5 && curDate.getHours() === 10 && curDate.getMinutes === 30) {
-
-    // }
 });
 
 function openMenu() {

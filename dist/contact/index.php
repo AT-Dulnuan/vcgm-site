@@ -67,7 +67,7 @@
     <!-- Styles -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 
 <body>
@@ -76,16 +76,16 @@
         <header>
             <nav data-aos="fade" data-aos-duration="500">
                 <div class="content-wrapper">
-                    <a href="index.html" class="logo"><img src="./assets/logo.png" alt=""></a>
+                    <a href="../" class="logo"><img src="../assets/logo.png" alt=""></a>
                     <div class="nav-links">
                         <ul>
-                            <li><a href="index.html">HOME</a></li>
-                            <li><a href="about.html">ABOUT</a></li>
-                            <li><a href="locations.html">LOCATIONS</a></li>
-                            <li><a href="sermons.html">SERMONS</a></li>
+                            <li><a href="../">HOME</a></li>
+                            <li><a href="../about">ABOUT</a></li>
+                            <li><a href="../locations">LOCATIONS</a></li>
+                            <li><a href="../sermons">SERMONS</a></li>
                         </ul>
                         <div class="btn-container">
-                            <a href="contact.php" class="btn btn-outline hover-btn" id="connect-btn">Lets
+                            <a href="./" class="btn btn-outline hover-btn" id="connect-btn">Lets
                                 Connect</a>
                         </div>
                     </div>
@@ -110,7 +110,7 @@
                 <?php echo $msgText; ?>
                 <?php if($msgType == 'is-success') : ?>
                 <div class="container has-text-centered">
-                    <a href="index.html" class="button is-text return-btn">Return to Home</a>
+                    <a href="../" class="button is-text return-btn">Return to Home</a>
                 </div>
                 <?php endif;?>
             </div>
@@ -159,10 +159,10 @@
                 </div>
                 <div class="links">
                     <ul>
-                        <li><a href="index.html">HOME</a></li>
-                        <li><a href="about.html">ABOUT</a></li>
-                        <li><a href="locations.html">LOCATIONS</a></li>
-                        <li><a href="sermons.html">SERMONS</a></li>
+                        <li><a href="../">HOME</a></li>
+                        <li><a href="../about">ABOUT</a></li>
+                        <li><a href="../locations">LOCATIONS</a></li>
+                        <li><a href="../sermons">SERMONS</a></li>
                     </ul>
                 </div>
                 <div class="connect">
@@ -180,7 +180,7 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://kit.fontawesome.com/3ce9093fd0.js" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>
