@@ -143,7 +143,7 @@
                                 placeholder="Type your message here..."><?php echo isset($_POST['message']) ? $message : ''; ?></textarea>
                         </div>
                     </div>
-                    <button class="button is-link" name="submit" type="submit"
+                    <button class="button send has-text-white" name="submit" type="submit"
                         <?php echo $disableForm; ?>>Submit</button>
                 </form>
             </div>

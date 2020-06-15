@@ -309,6 +309,9 @@ footer {
                 transition: 0.5s ease-in-out;
             }
         }
+        a.btn {
+            margin-top: 1.7rem;
+        }
     }
 }
 
@@ -317,7 +320,27 @@ footer {
 // Partials
 @import "home", "about", "locations", "sermons";
 
+#prayer {
+    background: linear-gradient(to bottom right, rgba(46,46,46,0.7), rgba(46,46,46,1)), url("../assets/prayer-header.jpg") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
 
+    label.label {
+        color: $white !important;
+    }
+
+    .button.send {
+        background-color: $highlight;
+        border: none;
+        color: $white;
+        transition: ease-in-out 0.3s;
+
+        &:hover {
+            background-color: rgba($highlight, 0.8);
+        }
+    }
+}
 
 #contact {
     header {
@@ -327,6 +350,17 @@ footer {
 
         .header-text {
             margin-top: 8%;
+        }
+    }
+
+    .button.send {
+        background-color: $highlight;
+        border: none;
+        color: $white;
+        transition: ease-in-out 0.3s;
+
+        &:hover {
+            background-color: rgba($highlight, 0.8);
         }
     }
 
@@ -517,9 +551,11 @@ and (min-width: 320px)
                 margin: 2rem 0;
             }
 
-            .connect i {
-                font-size: 2.3rem;
-                margin: 0.2rem 0.4rem;
+            .connect {
+                i {
+                    font-size: 2.3rem;
+                    margin: 0.2rem 0.4rem;
+                }
             }
         }
     }
@@ -527,6 +563,13 @@ and (min-width: 320px)
     // --------------------------------------------------- Home --------------------------------------------------------------
 
     #home {
+        #prayerPopup {
+            width: 100%;
+            margin: auto;
+            bottom: 0;
+            right: 0;
+        }
+
         section.livestream {
             .row {
                 flex-direction: column;
@@ -685,6 +728,21 @@ and (min-width: 320px)
     #contact {
         .button {
             width: 100%;
+        }
+    }
+
+     // --------------------------------------------------- Prayer --------------------------------------------------------------
+    #prayer {
+        height: unset;
+
+        .button {
+            width: 100%;
+        }
+    
+        .container {
+            width: 90%;
+            margin: auto;
+            padding: 2rem 0;
         }
     }
 

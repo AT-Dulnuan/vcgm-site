@@ -40,6 +40,14 @@ $(document).ready(function () {
         dots: true,
         pauseOnHover: false
     });
+    $("#closePrayer").click(function () {
+        $("#prayerPopup").addClass("close");
+    });
+    $(window).scroll(function () {
+        if ($(this).scrollTop()) {
+            $("#prayerPopup").addClass("open");
+        }
+    })
 });
 
 function openMenu() {

@@ -329,6 +329,65 @@ footer .connect ul a {
   transition: 0.5s ease-in-out;
 }
 
+footer .connect a.btn {
+  margin-top: 1.7rem;
+}
+
+#home #prayerPopup {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 1;
+  background-color: rgba(46, 46, 46, 0.9);
+  border-radius: 5px;
+  text-align: center;
+  padding: 2rem;
+  width: 20%;
+  -webkit-box-shadow: 10px 10px 33px 0px rgba(0, 0, 0, 0.29);
+  box-shadow: 10px 10px 33px 0px rgba(0, 0, 0, 0.29);
+  color: #FFFFFF;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
+}
+
+#home #prayerPopup.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+#home #prayerPopup.close {
+  visibility: hidden;
+  opacity: 0;
+}
+
+#home #prayerPopup .close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1.3rem;
+  cursor: pointer;
+}
+
+#home #prayerPopup h2 {
+  font-size: 30px;
+}
+
+#home #prayerPopup .btn-outline {
+  border-color: #0075A2;
+  color: #0075A2;
+  font-weight: bold;
+  margin-top: 1.7rem;
+}
+
+#home #prayerPopup .btn-outline:hover, #home #prayerPopup .btn-outline:focus, #home #prayerPopup .btn-outline:active {
+  color: #FFFFFF;
+}
+
+#home #prayerPopup .btn-outline:before {
+  background: #0075A2;
+}
+
 #home header {
   background: -webkit-gradient(linear, left top, right bottom, from(rgba(46, 46, 46, 0.4)), to(#2e2e2e)), url("../assets/home-header.jpg") no-repeat right;
   background: linear-gradient(to bottom right, rgba(46, 46, 46, 0.4), #2e2e2e), url("../assets/home-header.jpg") no-repeat right;
@@ -532,8 +591,16 @@ footer .connect ul a {
           align-items: center;
 }
 
-#locations section.main h2 {
+#locations section.main h2, #locations section.main h4 {
   color: #0075A2;
+}
+
+#locations section.main section.ph .row {
+  padding: 5rem 0;
+}
+
+#locations section.main section.ph h2 {
+  margin-top: 2rem;
 }
 
 #locations section.main .img-container {
@@ -554,7 +621,7 @@ footer .connect ul a {
   margin-top: 1rem;
 }
 
-#locations section.main ul.timings .title {
+#locations section.main .title {
   font-weight: bold;
   font-size: 1.2rem;
 }
@@ -728,6 +795,30 @@ footer .connect ul a {
   opacity: 1;
 }
 
+#prayer {
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(46, 46, 46, 0.7)), to(#2e2e2e)), url("../assets/prayer-header.jpg") no-repeat center;
+  background: linear-gradient(to bottom right, rgba(46, 46, 46, 0.7), #2e2e2e), url("../assets/prayer-header.jpg") no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  margin: 0;
+}
+
+#prayer label.label {
+  color: #FFFFFF !important;
+}
+
+#prayer .button.send {
+  background-color: #0075A2;
+  border: none;
+  color: #FFFFFF;
+  -webkit-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
+}
+
+#prayer .button.send:hover {
+  background-color: rgba(0, 117, 162, 0.8);
+}
+
 #contact header {
   background: -webkit-gradient(linear, left top, right bottom, from(rgba(46, 46, 46, 0.4)), to(#2e2e2e)), url("../assets/contactus-header.jpg") no-repeat center;
   background: linear-gradient(to bottom right, rgba(46, 46, 46, 0.4), #2e2e2e), url("../assets/contactus-header.jpg") no-repeat center;
@@ -737,6 +828,18 @@ footer .connect ul a {
 
 #contact header .header-text {
   margin-top: 8%;
+}
+
+#contact .button.send {
+  background-color: #0075A2;
+  border: none;
+  color: #FFFFFF;
+  -webkit-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
+}
+
+#contact .button.send:hover {
+  background-color: rgba(0, 117, 162, 0.8);
 }
 
 #contact section.contact-form {
@@ -898,6 +1001,12 @@ footer .connect ul a {
     font-size: 2.3rem;
     margin: 0.2rem 0.4rem;
   }
+  #home #prayerPopup {
+    width: 100%;
+    margin: auto;
+    bottom: 0;
+    right: 0;
+  }
   #home section.livestream .row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1003,6 +1112,17 @@ footer .connect ul a {
   }
   #contact .button {
     width: 100%;
+  }
+  #prayer {
+    height: unset;
+  }
+  #prayer .button {
+    width: 100%;
+  }
+  #prayer .container {
+    width: 90%;
+    margin: auto;
+    padding: 2rem 0;
   }
 }
 /*# sourceMappingURL=main.css.map */

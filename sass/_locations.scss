@@ -11,8 +11,17 @@
             align-items: center;
         }
 
-        h2 {
+        h2, h4 {
             color: $highlight;
+        }
+
+        section.ph {
+            .row {
+                padding: 5rem 0;
+            }
+            h2 {
+                margin-top: 2rem;
+            }
         }
 
         .img-container {
@@ -30,10 +39,10 @@
 
         ul.timings {
             margin-top: 1rem;
-            .title {
-                font-weight: bold;
-                font-size: 1.2rem;
-            }
+        }
+        .title {
+            font-weight: bold;
+            font-size: 1.2rem;
         }
 
         ul.socials {
