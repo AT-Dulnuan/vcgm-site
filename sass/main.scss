@@ -320,6 +320,34 @@ footer {
 // Partials
 @import "home", "about", "locations", "sermons";
 
+#construction {
+
+    .wrapper {
+        background-color: $highlight;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        color: $white;
+    }
+
+    img.construction-img {
+        position: absolute;
+        bottom: -10%;
+        right: -7%;
+        height: 900px;
+        opacity: 0.2;
+    }
+
+    a.btn {
+        margin-top: 2rem;
+    }
+}
+
 #prayer {
     background: linear-gradient(to bottom right, rgba(46,46,46,0.7), rgba(46,46,46,1)), url("../assets/prayer-header.jpg") no-repeat center;
     background-size: cover;
@@ -379,10 +407,23 @@ footer {
 }
 
 @media screen 
-and (max-width: 320px) {
+and (max-width: 700px) {
     header {
         h1 {
             font-size: 46px;
+        }
+    }
+
+    #construction {
+        .container {
+            width: 90%;
+            margin: auto;
+        }
+
+        img.construction-img {
+            height: 400px;
+                bottom: 0;
+                right: -15%;
         }
     }
 }

@@ -795,6 +795,37 @@ footer .connect a.btn {
   opacity: 1;
 }
 
+#construction .wrapper {
+  background-color: #0075A2;
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  color: #FFFFFF;
+}
+
+#construction img.construction-img {
+  position: absolute;
+  bottom: -10%;
+  right: -7%;
+  height: 900px;
+  opacity: 0.2;
+}
+
+#construction a.btn {
+  margin-top: 2rem;
+}
+
 #prayer {
   background: -webkit-gradient(linear, left top, right bottom, from(rgba(46, 46, 46, 0.7)), to(#2e2e2e)), url("../assets/prayer-header.jpg") no-repeat center;
   background: linear-gradient(to bottom right, rgba(46, 46, 46, 0.7), #2e2e2e), url("../assets/prayer-header.jpg") no-repeat center;
@@ -855,9 +886,18 @@ footer .connect a.btn {
   width: 80%;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 700px) {
   header h1 {
     font-size: 46px;
+  }
+  #construction .container {
+    width: 90%;
+    margin: auto;
+  }
+  #construction img.construction-img {
+    height: 400px;
+    bottom: 0;
+    right: -15%;
   }
 }
 
