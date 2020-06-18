@@ -826,30 +826,6 @@ footer .connect a.btn {
   margin-top: 2rem;
 }
 
-#prayer {
-  background: -webkit-gradient(linear, left top, right bottom, from(rgba(46, 46, 46, 0.7)), to(#2e2e2e)), url("../assets/prayer-header.jpg") no-repeat center;
-  background: linear-gradient(to bottom right, rgba(46, 46, 46, 0.7), #2e2e2e), url("../assets/prayer-header.jpg") no-repeat center;
-  background-size: cover;
-  height: 100vh;
-  margin: 0;
-}
-
-#prayer label.label {
-  color: #FFFFFF !important;
-}
-
-#prayer .button.send {
-  background-color: #0075A2;
-  border: none;
-  color: #FFFFFF;
-  -webkit-transition: ease-in-out 0.3s;
-  transition: ease-in-out 0.3s;
-}
-
-#prayer .button.send:hover {
-  background-color: rgba(0, 117, 162, 0.8);
-}
-
 #contact header {
   background: -webkit-gradient(linear, left top, right bottom, from(rgba(46, 46, 46, 0.4)), to(#2e2e2e)), url("../assets/contactus-header.jpg") no-repeat center;
   background: linear-gradient(to bottom right, rgba(46, 46, 46, 0.4), #2e2e2e), url("../assets/contactus-header.jpg") no-repeat center;
@@ -858,7 +834,7 @@ footer .connect a.btn {
 }
 
 #contact header .header-text {
-  margin-top: 8%;
+  height: 50vh;
 }
 
 #contact .button.send {

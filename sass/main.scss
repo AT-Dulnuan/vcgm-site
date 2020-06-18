@@ -348,27 +348,6 @@ footer {
     }
 }
 
-#prayer {
-    background: linear-gradient(to bottom right, rgba(46,46,46,0.7), rgba(46,46,46,1)), url("../assets/prayer-header.jpg") no-repeat center;
-    background-size: cover;
-    height: 100vh;
-    margin: 0;
-
-    label.label {
-        color: $white !important;
-    }
-
-    .button.send {
-        background-color: $highlight;
-        border: none;
-        color: $white;
-        transition: ease-in-out 0.3s;
-
-        &:hover {
-            background-color: rgba($highlight, 0.8);
-        }
-    }
-}
 
 #contact {
     header {
@@ -377,7 +356,7 @@ footer {
         height: 60vh;
 
         .header-text {
-            margin-top: 8%;
+            height: 50vh;
         }
     }
 

@@ -1,0 +1,28 @@
+{
+  "name": "vcgm-site",
+  "version": "1.0.0",
+  "description": "VCGM global website.",
+  "main": "sass/bulma-main.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css-build": "node-sass --omit-source-map-url sass/bulma-main.scss dist/css/bulma-main.css",
+    "css-watch": "npm run css-build -- --watch",
+    "start": "npm run css-watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AT-Dulnuan/vcgm-site.git"
+  },
+  "author": "Abigail Dulnuan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AT-Dulnuan/vcgm-site/issues"
+  },
+  "homepage": "https://github.com/AT-Dulnuan/vcgm-site#readme",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  },
+  "devDependencies": {
+    "bulma": "^0.9.0"
+  }
+}

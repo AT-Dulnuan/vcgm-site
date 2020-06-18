@@ -72,7 +72,7 @@
 
     <!-- Styles -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <link rel="stylesheet" href="../css/bulma-main.css">
     <link rel="stylesheet" href="../css/main.css">
 </head>
 
@@ -111,16 +111,16 @@
 
         <section class="contact-form">
             <div class="container">
-            <?php if($msgText != ''): ?>
-            <div class="notification <?php echo $msgType; ?> is-light has-text-centered">
-                <?php echo $msgText; ?>
-                <?php if($msgType == 'is-success') : ?>
-                <div class="container has-text-centered">
-                    <a href="../" class="button is-text return-btn">Return to Home</a>
+                <?php if($msgText != ''): ?>
+                <div class="notification <?php echo $msgType; ?> is-light has-text-centered">
+                    <?php echo $msgText; ?>
+                    <?php if($msgType == 'is-success') : ?>
+                    <div class="container has-text-centered">
+                        <a href="../" class="button is-text return-btn">Return to Home</a>
+                    </div>
+                    <?php endif;?>
                 </div>
-                <?php endif;?>
-            </div>
-            <?php endif; ?>
+                <?php endif; ?>
                 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" novalidate>
                     <div class="field">
                         <label class="label">Full Name</label>
@@ -135,7 +135,8 @@
                     <div class="field">
                         <label class="label">Email</label>
                         <div class="control has-icons-left">
-                            <input class="input <?php echo $emailError; ?>" type="email" name="email" placeholder="john.doe@mail.com"
+                            <input class="input <?php echo $emailError; ?>" type="email" name="email"
+                                placeholder="john.doe@mail.com"
                                 value="<?php echo isset($_POST['email']) ? $email : ''; ?>">
                             <span class="icon is-small is-left">
                                 <i class="fas fa-envelope"></i>

@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+$primary: #0075A2;
+$label-color: #FFFFFF;
+
+#prayer {
+    background: linear-gradient(to bottom right, rgba(46,46,46,0.7), rgba(46,46,46,1)), url("../assets/prayer-header.jpg") no-repeat center;
+    background-size: cover;
+    margin: 0;
+
+    p.verse {
+        margin-bottom: 1rem;
+    }
+
+    .level {
+        height: 100%;
+        width: 100%;
+    }
+
+    label.radio input:focus {
+        color: #FFFFFF;
+    }
+
+    .checkbox, .radio:hover {
+        color: rgba(#FFFFFF, 0.8);;
+    }
+}
+
+@media only screen and (max-width: 1016px) {
+    #prayer {
+        height: 100%;
+
+        .level {
+            width: 95%;
+            margin: auto;
+        }
+
+        .container {
+            padding: 3rem 0;
+        }
+    }
+}
+
+@media only screen and (min-width: 766px) {
+    #prayer {
+        height: 100vh;
+    }
+}
+
+@import "../node_modules/bulma/bulma.sass";
