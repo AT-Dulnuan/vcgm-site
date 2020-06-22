@@ -603,6 +603,10 @@ footer .connect a.btn {
   margin-top: 2rem;
 }
 
+#locations section.main section.ph img {
+  margin-top: 1rem;
+}
+
 #locations section.main .img-container {
   width: 30%;
 }
@@ -639,24 +643,77 @@ footer .connect a.btn {
   font-size: 1.5rem;
 }
 
-#locations section.main ul.socials li a {
+#locations section.main a {
   font-weight: bold;
 }
 
-#locations section.main ul.socials li a span.unhovered {
+#locations section.main a span.unhovered {
   display: inline-block;
 }
 
-#locations section.main ul.socials li a span.hovered {
+#locations section.main a span.hovered {
   display: none;
 }
 
-#locations section.main ul.socials li a:hover span.unhovered {
+#locations section.main a:hover span.unhovered {
   display: none;
 }
 
-#locations section.main ul.socials li a:hover span.hovered {
+#locations section.main a:hover span.hovered {
   display: inline-block;
+}
+
+#locations section.main section.affiliates {
+  background-color: rgba(245, 245, 245, 0.8);
+  padding: 2rem 0;
+}
+
+#locations section.main section.affiliates h4 {
+  color: #2E2E2E;
+}
+
+#locations section.main section.affiliates .grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  row-gap: 3rem;
+  width: 90%;
+  margin: auto;
+  padding: 1rem 0;
+}
+
+#locations section.main section.affiliates .grid a.item {
+  background-color: rgba(245, 245, 245, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  margin: auto;
+  cursor: pointer;
+}
+
+#locations section.main section.affiliates .grid a.item .text, #locations section.main section.affiliates .grid a.item h4 {
+  -webkit-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
+  width: 90%;
+}
+
+#locations section.main section.affiliates .grid a.item img {
+  max-width: 120px;
+  margin-right: 1rem;
+}
+
+#locations section.main section.affiliates .grid a.item:hover .text, #locations section.main section.affiliates .grid a.item:hover h4 {
+  color: #0075A2;
 }
 
 #sermons header {
@@ -1096,6 +1153,9 @@ footer .connect a.btn {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+  }
+  #locations section.main section.affiliates .grid {
+    display: block;
   }
   #sermons section.videos .wrapper {
     width: 90%;

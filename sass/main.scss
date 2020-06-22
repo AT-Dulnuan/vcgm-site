@@ -42,6 +42,7 @@ $btn-text: 18px;
 
 $highlight: #0075A2;
 $text: #2E2E2E;
+$light-white: #F5F5F5;
 $white: #FFFFFF;
 $btn-hover: #0685B6;
 
@@ -695,6 +696,12 @@ and (min-width: 320px)
             section.me {
                 .row {
                     flex-direction: column-reverse;
+                }
+            }
+
+            section.affiliates {
+                .grid {
+                    display: block;
                 }
             }
         }

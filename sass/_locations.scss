@@ -22,6 +22,10 @@
             h2 {
                 margin-top: 2rem;
             }
+
+            img {
+                margin-top: 1rem;
+            }
         }
 
         .img-container {
@@ -55,26 +59,68 @@
                 i {
                     font-size: 1.5rem;
                 }
+            }
+        }
 
-                a {
+        a {
                     
-                    font-weight: bold;
-                    span.unhovered {
-                        display: inline-block;
+            font-weight: bold;
+            span.unhovered {
+                display: inline-block;
+            }
+
+            span.hovered {
+                display: none;
+            }
+
+            &:hover {
+                span.unhovered {
+                    display: none;
+                }
+
+                span.hovered {
+                    display: inline-block;
+                }
+            }
+        }
+
+        section.affiliates {
+            background-color: rgba($light-white, 0.8);
+            padding: 2rem 0;
+            h4 {
+                color: $text;
+            }
+
+            .grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: auto;
+                row-gap: 3rem;
+                width: 90%;
+                margin: auto;
+                padding: 1rem 0;
+
+                a.item {
+                    background-color: rgba($light-white, 0.8);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 80%;
+                    margin: auto;
+                    cursor: pointer;
+                    
+                    .text, h4 {
+                        transition: ease-in-out 0.3s;
+                        width: 90%;
+                    }
+                    
+                    img {
+                        max-width: 120px;
+                        margin-right: 1rem;
                     }
 
-                    span.hovered {
-                        display: none;
-                    }
-
-                    &:hover {
-                        span.unhovered {
-                            display: none;
-                        }
-
-                        span.hovered {
-                            display: inline-block;
-                        }
+                    &:hover .text, &:hover h4 {
+                        color: $highlight;
                     }
                 }
             }
