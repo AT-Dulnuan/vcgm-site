@@ -1157,6 +1157,27 @@ footer .connect a.btn {
   #locations section.main section.affiliates .grid {
     display: block;
   }
+  #locations section.main section.affiliates .grid a.item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    margin: 2rem auto;
+    width: 90%;
+  }
+  #locations section.main section.affiliates .grid a.item .text {
+    width: 100%;
+  }
+  #locations section.main section.affiliates .grid a.item h4 {
+    display: inline-block;
+  }
+  #locations section.main section.affiliates .grid a.item img {
+    margin: 0;
+  }
   #sermons section.videos .wrapper {
     width: 90%;
     margin: auto;
